@@ -27,7 +27,7 @@ def main():
                 # Agregar funcion aqui...
             elif opcion == 4:
                 print("\nOpción 4 seleccionada: Calcular el factorial.")
-                # Agregar funcion aqui...
+                calcular_factorial()
             elif opcion == 5:
                 print("\nOpción 5 seleccionada: Imprimir tablas de multiplicar.")
                 while True:
@@ -59,7 +59,7 @@ def main():
                 # Agregar funcion aqui...
             elif opcion == 8:
                 print("\nOpción 8 seleccionada: Encontrar máximo, mínimo y total de números.")
-                # Agregar funcion aqui...
+                Calcular_max_min()
             elif opcion == 9:
                 print("\nSaliendo del programa. ¡Hasta luego!")
                 break
@@ -68,6 +68,7 @@ def main():
 
         except ValueError:
             print("\nEntrada inválida. Por favor, ingrese un número.")
+        
 def suma_numeros():
     print("Introduce números para sumar. Ingresa una línea vacía para finalizar.")
     suma = 0
@@ -80,6 +81,8 @@ def suma_numeros():
         except ValueError:
             print("Por favor, introduce un número válido.")
     print(f"La suma es: {suma}")
+
+    input ("Presione cualquier tecla para continuar.")
     
 def producto_numeros():
     print("Introduce números para multiplicar. Ingresa una línea vacía para finalizar.")
@@ -98,5 +101,43 @@ def producto_numeros():
         print(f"El producto es: {producto}")
     else:
         print("No se ingresaron números válidos.")
+    input ("Presione cualquier tecla para continuar.")
+
+4
+def calcular_factorial():
+    print("Calculadora de Factoriales")
+    i = 1
+    num = int(input("Ingrese un número: "))
+
+    factorial = 1
+    while (i <= num):
+        factorial = factorial * i
+        i = i+1
+
+    print ("Factorial de " + str(num) + " = " + str(factorial))
+    input ("Presione cualquier tecla para continuar.")
+
+def Calcular_max_min():
+    print("Valor mínimo y máximo de varios valores")
+    valores = []
+    while True:
+        entrada = input("Número: ")
+        if entrada.strip() == "":
+            break
+        try:
+            valores.append(float(entrada))
+        except ValueError:
+            print("Por favor, introduce un número válido.")
+    
+    if valores:
+        minimo = min(valores)
+        maximo = max(valores)
+        print(f"Valor mínimo: {minimo}")
+        print(f"Valor máximo: {maximo}")
+    else:
+        print("No se ingresaron números válidos.")
+    
+    input("Presione cualquier tecla para continuar.")
+
 if __name__ == "__main__":
     main()
