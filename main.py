@@ -26,7 +26,7 @@ def main():
                 print("Opción 3 seleccionada: División entre 2 números.")
                 # Agregar funcion aqui...
             elif opcion == 4:
-                print("Opción 4 seleccionada: Calcular el factorial.")
+                print("Oción 4 seleccionada: Calcular el factorial.")
                 # Agregar funcion aqui...
             elif opcion == 5:
                 print("Opción 5 seleccionada: Imprimir tablas de multiplicar.")
