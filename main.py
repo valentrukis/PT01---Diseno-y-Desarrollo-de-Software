@@ -17,37 +17,57 @@ def main():
             opcion = int(input("\nSeleccione una opción: "))
 
             if opcion == 1:
-                print("Opción 1 seleccionada: Suma de 'n' números.")
+                print("\nOpción 1 seleccionada: Suma de 'n' números.")
                 # Agregar funcion aqui...
             elif opcion == 2:
-                print("Opción 2 seleccionada: Producto entre 'n' números.")
+                print("\nOpción 2 seleccionada: Producto entre 'n' números.")
                 # Agregar funcion aqui...
             elif opcion == 3:
-                print("Opción 3 seleccionada: División entre 2 números.")
+                print("\nOpción 3 seleccionada: División entre 2 números.")
                 # Agregar funcion aqui...
             elif opcion == 4:
-                print("Oción 4 seleccionada: Calcular el factorial.")
+                print("\nOpción 4 seleccionada: Calcular el factorial.")
                 # Agregar funcion aqui...
             elif opcion == 5:
-                print("Opción 5 seleccionada: Imprimir tablas de multiplicar.")
-                # Agregar funcion aqui...
+                print("\nOpción 5 seleccionada: Imprimir tablas de multiplicar.")
+                while True:
+                    try:
+                        n = int(input("Introduce un número para mostrar sus tablas de multiplicar: "))
+                        print(f"\nTablas de multiplicar del número {n}:")
+                        for i in range (1, 11):
+                            print(f"{n} x {i} = {n * i}")
+                        repeat = input("\n¿Quieres intentar con otro número? (si/no): ").strip().lower()
+                        if repeat == 'no':
+                            break
+                    except ValueError:
+                        print("\nPor favor, introduce un número valido.")
             elif opcion == 6:
-                print("Opción 6 seleccionada: Calcular cuadrado y cubo de un número.")
-                # Agregar funcion aqui...
+                print("\nOpción 6 seleccionada: Calcular cuadrado y cubo de un número.")
+                while True:
+                    try:
+                        n = int(input("Introduce un número para calcular su cuadrado y cubo: "))
+                        print(f"\nNúmero: {n}")
+                        print(f"Cuadrado: {n ** 2}")
+                        print(f"Cubo: {n ** 3}")
+                        repeat = input("\n¿Quieres intentar con otro número? (si/no): ").strip().lower()
+                        if repeat == 'no':
+                            break
+                    except ValueError:
+                        print("\nPor favor, introduce un número valido.")
             elif opcion == 7:
-                print("Opción 7 seleccionada: Determinar promedio de números.")
+                print("\nOpción 7 seleccionada: Determinar promedio de números.")
                 # Agregar funcion aqui...
             elif opcion == 8:
-                print("Opción 8 seleccionada: Encontrar máximo, mínimo y total de números.")
+                print("\nOpción 8 seleccionada: Encontrar máximo, mínimo y total de números.")
                 # Agregar funcion aqui...
             elif opcion == 9:
-                print("Saliendo del programa. ¡Hasta luego!")
+                print("\nSaliendo del programa. ¡Hasta luego!")
                 break
             else:
-                print("Opción no válida. Intente nuevamente.")
+                print("\nOpción no válida. Intente nuevamente.")
 
         except ValueError:
-            print("Entrada inválida. Por favor, ingrese un número.")
+            print("\nEntrada inválida. Por favor, ingrese un número.")
 
 if __name__ == "__main__":
     main()
