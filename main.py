@@ -18,10 +18,10 @@ def main():
 
             if opcion == 1:
                 print("\nOpción 1 seleccionada: Suma de 'n' números.")
-                # Agregar funcion aqui...
+                suma_numeros()
             elif opcion == 2:
                 print("\nOpción 2 seleccionada: Producto entre 'n' números.")
-                # Agregar funcion aqui...
+                producto_numeros()
             elif opcion == 3:
                 print("\nOpción 3 seleccionada: División entre 2 números.")
                 # Agregar funcion aqui...
@@ -68,6 +68,35 @@ def main():
 
         except ValueError:
             print("\nEntrada inválida. Por favor, ingrese un número.")
-
+def suma_numeros():
+    print("Introduce números para sumar. Ingresa una línea vacía para finalizar.")
+    suma = 0
+    while True:
+        entrada = input("Número: ")
+        if entrada.strip() == "":
+            break
+        try:
+            suma += float(entrada)
+        except ValueError:
+            print("Por favor, introduce un número válido.")
+    print(f"La suma es: {suma}")
+    
+def producto_numeros():
+    print("Introduce números para multiplicar. Ingresa una línea vacía para finalizar.")
+    producto = 1
+    numeros_ingresados = False
+    while True:
+        entrada = input("Número: ")
+        if entrada.strip() == "":
+            break
+        try:
+            producto *= float(entrada)
+            numeros_ingresados = True
+        except ValueError:
+            print("Por favor, introduce un número válido.")
+    if numeros_ingresados:
+        print(f"El producto es: {producto}")
+    else:
+        print("No se ingresaron números válidos.")
 if __name__ == "__main__":
     main()
