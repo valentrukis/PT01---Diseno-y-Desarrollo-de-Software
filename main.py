@@ -56,7 +56,7 @@ def main():
                         print("\nPor favor, introduce un número valido.")
             elif opcion == 7:
                 print("\nOpción 7 seleccionada: Determinar promedio de números.")
-                # Agregar funcion aqui...
+                determinar_promedio()
             elif opcion == 8:
                 print("\nOpción 8 seleccionada: Encontrar máximo, mínimo y total de números.")
                 Calcular_max_min()
@@ -138,6 +138,25 @@ def Calcular_max_min():
         print("No se ingresaron números válidos.")
     
     input("Presione cualquier tecla para continuar.")
+
+def determinar_promedio():
+    numeros = []
+    print("Ingrese números para calcular el promedio. Ingrese -1 para finalizar.")
+    while True:
+        try:
+            num = float(input("Número: "))
+            if num == -1:
+                break
+            numeros.append(num)
+        except ValueError:
+            print("Por favor, ingrese un número válido.")
+
+    if numeros:
+        promedio = sum(numeros) / len(numeros)
+        print(f"El promedio de los números ingresados es: {promedio}")
+    else:
+        print("No se ingresaron números.")
+
 
 if __name__ == "__main__":
     main()
