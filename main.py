@@ -24,7 +24,7 @@ def main():
                 producto_numeros()
             elif opcion == 3:
                 print("\nOpción 3 seleccionada: División entre 2 números.")
-                # Agregar funcion aqui...
+                division_numeros()
             elif opcion == 4:
                 print("\nOpción 4 seleccionada: Calcular el factorial.")
                 calcular_factorial()
@@ -156,6 +156,21 @@ def determinar_promedio():
         print(f"El promedio de los números ingresados es: {promedio}")
     else:
         print("No se ingresaron números.")
+
+def division_numeros():
+    print("Introduzca los valores a dividir.")
+    try:
+        num1 = float(input("Ingrese el primer número: "))
+        num2 = float(input("Ingrese el segundo número: "))
+        if num2 == 0:
+            print("Error: No se puede dividir entre cero.")
+        else:
+            resultado = num1 / num2
+            print(f"El resultado de la división es: {resultado}")
+    except ValueError:
+        print("Por favor, ingrese números válidos.")
+    input("Presione cualquier tecla para continuar.")
+
 
 
 if __name__ == "__main__":
